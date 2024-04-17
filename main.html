@@ -3,14 +3,79 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            font-weight: 500;
+            text-align: center;
+            text-decoration: underline;
+            margin-top: 10px;
+        }
+
+        form {
+            font-size: larger;
+        }
+
+        div {
+            margin: 50px;
+        }
+
+        .txt {
+            padding: 5px 10px;
+            border-width: 1;
+            border-radius: 10px;
+        }
+
+        #btn {
+            display: flex;
+            justify-content: center;
+            margin: 100px 0;
+        }
+
+        #submit {
+            background: linear-gradient(to right, gray, green);
+            font-weight: 700;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            box-shadow: 1px 1px 15px green;
+        }
+    </style>
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <!-- the entire body must be written by student -->
+    <h1>Feedback Form</h1>
+    <form action="" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input class="txt" id="name" type="text" minlength="3" maxlength="5" placeholder="John Doe" required>
+        </div>
+        <div>
+            <label for="portfolio">Portfolio:</label>
+            <input class="txt" id="portfolio" type="url" placeholder="www.yourpage.com" required>
+        </div>
+        <div>
+            <label for="favColor">Favorite Color:</label>
+            <input id="favColor" type="color">
+        </div>
+        <div>
+            <label for="likeness">Likeness:</label>
+            <input id="likeness" type="range" min="1" max="100">
+        </div>
+        <div id="btn">
+            <button id="submit" type="submit">Submit form</button>
+        </div>
+    </form>
 
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
